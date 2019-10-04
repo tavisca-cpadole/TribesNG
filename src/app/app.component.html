@@ -1,0 +1,14 @@
+<nav class="tribeItems">
+  <button
+    class="tribeButton"
+    *ngFor="let tribe of tribes; index as i"
+    [routerLink]="[
+      tribe.Value,
+      { tribeName: tribe.Name, tribeIndex: i | json }
+    ]"
+  >
+    {{ tribe.Name }}
+  </button>
+</nav>
+
+<router-outlet (activate)="onActivate($event)"></router-outlet>

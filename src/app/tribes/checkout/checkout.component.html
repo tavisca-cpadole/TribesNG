@@ -1,0 +1,52 @@
+<div class="inputBox">
+  <input
+    [(ngModel)]="tribeName"
+    type="text"
+    (keyup)="UpdateTribeName($event)"
+  />
+</div>
+
+<div class="mainFrame" *ngIf="employeeData.length > 0; else noData">
+  <div class="cardStack color1">
+    <p>
+      <b><i>Development</i></b>
+    </p>
+    <ng-container *ngFor="let employee of employeeData">
+      <app-employee-card
+        [name]="employee.name"
+        [designation]="employee.designation"
+        [imageUrl]="employee.imageUrl"
+        *ngIf="employee.designation == 'Software Developer'"
+      ></app-employee-card>
+    </ng-container>
+  </div>
+
+  <div class="cardStack color2">
+    <p>
+      <b><i>Management</i></b>
+    </p>
+    <ng-container *ngFor="let employee of employeeData" style="width: 40%">
+      <app-employee-card
+        [name]="employee.name"
+        [designation]="employee.designation"
+        [imageUrl]="employee.imageUrl"
+        *ngIf="employee.designation == 'Project Manager'"
+      ></app-employee-card>
+    </ng-container>
+  </div>
+
+  <div class="cardStack color3">
+    <p>
+      <b><i>Business</i></b>
+    </p>
+    <ng-container *ngFor="let employee of employeeData">
+      <app-employee-card
+        [name]="employee.name"
+        [designation]="employee.designation"
+        [imageUrl]="employee.imageUrl"
+        *ngIf="employee.designation == 'Business Analyst'"
+      ></app-employee-card>
+    </ng-container>
+  </div>
+</div>
+<ng-template #noData><h2>No Employess In this Tribe</h2></ng-template>

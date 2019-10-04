@@ -1,0 +1,49 @@
+.inputBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.mainFrame {
+  display: flex;
+  flex-flow: row;
+}
+
+.cardStack {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainFrame {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
